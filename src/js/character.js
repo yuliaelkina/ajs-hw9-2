@@ -12,4 +12,23 @@ export default class Character {
     this.level = 1;
     this.type = type;
   }
+
+  levelUp() {
+    if (this.health <= 0) {
+      throw new Error('Невозможно повысить уровень мертвого персонажа');
+    }
+    this.health = 100;
+    this.level += 1;
+    this.attack *= 1.2;
+    this.defence *= 1.2;
+  }
+
+  damage(points) {
+    if (this.health >= 0) {
+      this.health -= points * (1 - this.defence / 100);
+      if (this.health < 0) {
+        this.health = 0;
+      }
+    }
+  }
 }

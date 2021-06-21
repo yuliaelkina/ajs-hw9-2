@@ -16,9 +16,7 @@ export default function sortingByProps(obj, sortOrder) {
     if (a.key < b.key) {
       return -1;
     }
-    if (a.key > b.key) {
-      return 1;
-    }
+    return 1;
   });
   const heroCard = [].concat(heroCardStart, heroCardEnd);
   return heroCard;

@@ -3,7 +3,7 @@ export default function sortingByProps(obj, sortOrder) {
   const heroCardEnd = [];
   heroCardStart.length = sortOrder.length;
   for (const prop in obj) {
-    if (obj.hasOwnProperty(prop)) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       if (sortOrder.includes(prop)) {
         heroCardStart[sortOrder.indexOf(prop)] = { key: prop, value: obj[prop] };
       }

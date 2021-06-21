@@ -6,8 +6,7 @@ export default function sortingByProps(obj, sortOrder) {
     if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       if (sortOrder.includes(prop)) {
         heroCardStart[sortOrder.indexOf(prop)] = { key: prop, value: obj[prop] };
-      }
-      else {
+      } else {
         heroCardEnd.push({ key: prop, value: obj[prop] });
       }
     }

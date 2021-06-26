@@ -11,7 +11,7 @@ export default class Team {
   }
 
   addAll(...heroes) {
-    for (let hero of heroes) {
+    for (const hero of heroes) {
       this.members.add(hero);
     }
   }

@@ -10,6 +10,7 @@
       "error",
       "LabeledStatement",
       "WithStatement"
-    ]
+    ],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   }
 }
